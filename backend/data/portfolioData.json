@@ -1,0 +1,205 @@
+{
+  "personal": {
+    "name": "Champa Jha",
+    "role": "Full Stack Developer & AI Enthusiast",
+    "bio": "I believe the best way to learn is by building. I'm passionate about exploring new technologies, turning ideas into reality, and creating software that delivers real value. Currently studying B.Tech. in Information Technology.",
+    "email": "champgmail@gmail.com",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/thechamphub/",
+      "github": "https://github.com/thechampgit",
+      "instagram": "https://www.instagram.com/raszpberryy/",
+      "discord": "https://discord.com/channels/@me"
+    }
+  },
+  "skills": {
+    "languages": ["JavaScript", "HTML5", "CSS3", "SQL", "Java", "Python"],
+    "frameworks": ["React", "Next.js", "Node.js", "Vite", "Framer Motion", "GSAP", "Tailwind CSS"],
+    "tools": ["VS Code", "IntelliJ IDEA", "Git", "GitHub", "Vercel", "Firebase", "MongoDB", "Figma"],
+    "concepts": ["DBMS", "OOPs", "WebRTC Camera API", "HTML5 Canvas", "Geospatial Mapping", "AI Agents", "Vibe Coding"],
+    "softSkills": ["Problem Solving", "Critical Thinking", "Team Collaboration", "Communication", "Quick Learner", "Agile Mindset"]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Indian Sign Language Gen",
+      "tag": "AI & Web Dev",
+      "desc": "An AI-based multimodal translation platform that converts English and Hindi speech, text, and visual content into Indian Sign Language (ISL), and translates ISL back into English and Hindi.",
+      "github": "https://github.com/thechampgit/INDIAN-SIGN-LANGUAGE-GEN",
+      "techStack": ["React", "Vite", "Firebase", "GSAP", "CSS3"],
+      "vividDesc": "A cutting-edge multimodal translation system developed to bridge the communication gap between the hearing-impaired community and the general public. This AI-powered tool accepts inputs in the form of spoken Hindi/English speech, written text, or video feeds, and translates them in real-time to Indian Sign Language (ISL) animations. It also acts as a bidirectional translator, taking ISL sign gestures from a camera feed and translating them back into audio and text.",
+      "timeline": "8 Weeks",
+      "role": "AI & Frontend Engineer",
+      "features": [
+        "Real-time conversion of speech to ISL animations.",
+        "Bidirectional camera translation from ISL back to speech.",
+        "Interactive tutorial modules for learning key ISL signs.",
+        "Advanced hand-gesture recognition using computer vision."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Naye Pankh",
+      "tag": "Web Dev",
+      "desc": "A NGO management platform for volunteer registration, donation campaigns, and event management.",
+      "link": "https://nayepankh-ngo.vercel.app/",
+      "github": "https://github.com/thechampgit/NayePankh-NGO",
+      "techStack": ["React.js", "Firebase Auth", "Firestore", "Tailwind CSS"],
+      "vividDesc": "An intuitive NGO management and fundraising ecosystem designed to streamline volunteer engagement and digital donations for 'Naye Pankh Foundation'. The portal features a secure custom authentication system, a real-time volunteer onboarding flow, administrative tools to launch donation drives, and a public-facing blog tracking social impact initiatives.",
+      "timeline": "4 Weeks",
+      "role": "Full Stack Developer",
+      "features": [
+        "Dynamic volunteer onboarding registration and background approval.",
+        "Secure payments integration for digital donation campaigns.",
+        "Real-time announcements and blogging framework to document social impacts.",
+        "Comprehensive administrator panel for volunteer coordination and drive tracking."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "E-Swachh",
+      "tag": "Web Dev",
+      "desc": "A civic issue reporting platform that enables citizens to report and track municipal problems such as garbage accumulation, potholes, water leakage, and streetlight failures using real-time geolocation and image uploads.",
+      "link": "https://e-swachh.vercel.app/",
+      "github": "https://github.com/thechampgit/E-SWACHH",
+      "techStack": ["React", "Firebase", "Leaflet", "CSS Modules", "Google Maps API"],
+      "vividDesc": "A geolocated civic complaint and sanitation management software. Citizens can flag public waste dumps, flooding, and sanitation issues by snapping a photo. The app automatically extracts GPS coordinates and creates an interactive pin on a live map. Municipal admins use the backend dashboard to triage issues, assign field workers, and update issue statuses in real time.",
+      "timeline": "6 Weeks",
+      "role": "Frontend & Geospatial Developer",
+      "features": [
+        "Interactive mapping with geolocated pinpoints and custom leaflet layers.",
+        "Photo-based reporting with EXIF metadata parsing for verification.",
+        "Role-based control rooms for government triage and field response.",
+        "Real-time civic status trackers for citizens to monitor complaint progress."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "One Piece",
+      "tag": "Web Dev & Animation",
+      "desc": "A pirate adventure game where users can explore the One Piece world and find treasure. Set sail into the Grand Line through an immersive One Piece-inspired web experience featuring cinematic animations, iconic characters, and a modern interactive UI built with React, Vite, and Framer Motion.",
+      "github": "https://github.com/thechampgit/ONE-PIECE",
+      "techStack": ["React", "Vite", "Framer Motion"],
+      "vividDesc": "One Piece follows Monkey D. Luffy, a young pirate whose body gained the properties of rubber after eating the Gum-Gum Fruit. Inspired by the legendary pirate Red-Haired Shanks, Luffy sets sail to find the legendary treasure known as the One Piece and become the King of the Pirates. During his journey across the Grand Line and the New World, he forms the Straw Hat Pirates, each member chasing their own dream while facing powerful enemies, uncovering hidden history, and challenging the oppressive World Government.",
+      "timeline": "3 Weeks",
+      "role": "UI/UX & Interactive Designer",
+      "features": [
+        "Stunning interactive character bios with animations.",
+        "Rich thematic custom backgrounds and stylized UI patterns.",
+        "Interactive Grand Line map route navigation.",
+        "Fluid page transitions mimicking comic book panel zooms."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Selfie Shuffle",
+      "tag": "Web Dev & Canvas",
+      "desc": "A fun and interactive web-based puzzle game where players transform their own selfies into a personalized jigsaw puzzle.",
+      "link": "https://selfie-shuffle.vercel.app/",
+      "github": "https://github.com/thechampgit/SELFIE-SHUFFLE",
+      "techStack": ["React", "HTML5 Canvas", "WebRTC Camera API", "CSS Grid", "GSAP"],
+      "vividDesc": "A gamified web experience where users can take a live selfie using their web camera or upload any portrait image to instantly generate a custom, playable jigsaw puzzle. The game splits the image into canvas fragments using custom grid algorithms, shuffles them with interactive transition animations, and tracks player moves, time elapsed, and high scores.",
+      "timeline": "2 Weeks",
+      "role": "Core Game Logic Developer",
+      "features": [
+        "Dynamic canvas image fragmentation splitting algorithm.",
+        "Interactive puzzle-piece dragging with grid snapping detection.",
+        "Local Storage database integrations for high-score tracking.",
+        "Camera streaming utilizing native browser WebRTC media APIs."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "duration": "2024 - 2027",
+      "title": "B.Tech. in Information Technology",
+      "institution": "University College of Engineering and Technology, Hazaribagh",
+      "tags": ["Web Dev", "Software Testing"]
+    },
+    {
+      "duration": "2020 - 2023",
+      "title": "Diploma in Civil Engineering",
+      "institution": "Govt. Women's Polytechnic, Dumka",
+      "tags": ["RCC", "TOS", "Surveying"]
+    },
+    {
+      "duration": "2020",
+      "title": "Matriculation",
+      "institution": "St. Joseph's Convent Higher Secondary School, Chittaranjan",
+      "tags": []
+    }
+  ],
+  "experience": [
+    {
+      "duration": "2026",
+      "title": "Mern Stack Developer (Internship)",
+      "institution": "Techies Gateway, Hazaribagh",
+      "tags": ["HTML", "CSS", "JavaScript", "Node.js", "Mongo DB"]
+    },
+    {
+      "duration": "2026",
+      "title": "Introduction to Modern AI (Internship/Training)",
+      "institution": "Cisco Networking Company",
+      "tags": ["AI Agents", "Vibe Coding"]
+    }
+  ],
+  "certifications": [
+    {
+      "year": "2025",
+      "title": "PROGRAMMING IN JAVA (ELITE)",
+      "issuer": "NPTEL",
+      "description": "Successfully completed the NPTEL certification course in Programming in Java with an Elite grade. The course covered advanced Java concepts including Object-Oriented Programming, Exception Handling, Multithreading, Generics, Applets, Swing, and Database Connectivity (JDBC)."
+    },
+    {
+      "year": "2025",
+      "title": "ARTIFICIAL INTELLIGENCE",
+      "issuer": "Codsoft",
+      "description": "Completed an intensive 4-week virtual internship in Artificial Intelligence at Codsoft. During this internship, I designed, developed, and deployed multiple machine learning solutions, including a Movie Recommendation System using collaborative filtering, an NLP-based Spam SMS Classifier, and a Tic-Tac-Toe AI bot leveraging the Minimax algorithm with alpha-beta pruning."
+    },
+    {
+      "year": "2026",
+      "title": "INTRODUCTION TO AI",
+      "issuer": "CISCO",
+      "description": "Completed the Introduction to AI curriculum offered by Cisco Networking Academy, gaining core insights into the foundational theories of neural networks, deep learning models, data preprocessing pipelines, and ethical frameworks for building responsible AI applications."
+    }
+  ],
+  "achievements": [
+    "Earned Elite status in NPTEL's Programming in Java certification, representing top performance.",
+    "Engineered and deployed E-Swachh, a civic complaint platform featuring custom Leaflet mapping and EXIF data coordination.",
+    "Integrated hardware-accelerated computer-vision frameworks inside Indian Sign Language Gen for fluid sign recognition."
+  ],
+  "accomplishments": [
+    "Successfully pivoted from Civil Engineering (Diploma) into computer software science (B.Tech IT), adapting swiftly to OOPs, web paradigms, and AI architectures.",
+    "Completed virtual internships with Codsoft, Cisco, and Techies Gateway, delivering production-ready web interfaces."
+  ],
+  "awards": [
+    "NPTEL Elite Certification Award (Java)",
+    "Academic Merit and Top Performer Recognition at UCET Hazaribagh"
+  ],
+  "careerGoals": {
+    "shortTerm": "Secure a challenging role as a Full-Stack Developer or AI Engineer, focusing on building user-centric, interactive web applications and integrating advanced LLM capabilities.",
+    "longTerm": "Architect accessibility-focused software platforms that utilize computer vision, real-time geodata, and speech models to solve real-world problems and bridge digital accessibility gaps."
+  },
+  "hobbies": [
+    "Studying layouts, animations, and typography structures (UI design and Vibe Coding).",
+    "Reading books, face painting, upcycling everyday materials into creative crafts, and exploring DIY art projects..",
+    "Solving canvas grid fragmentation logic and algorithmic puzzle games."
+  ],
+  "frequentlyAskedQuestions": [
+    {
+      "question": "What is your greatest strength?",
+      "answer": "I am a self-taught, hands-on builder. I learn best by designing and coding functional apps. I love taking complex, dry logic and turning it into an interactive UI—like the custom sliding fragment algorithm in Selfie Shuffle or Leaflet maps in E-Swachh."
+    },
+    {
+      "question": "What is your biggest technical challenge so far?",
+      "answer": "When building Indian Sign Language Gen, implementing real-time camera-based gesture recognition in the browser was challenging due to frame rate drops. I optimized it by writing lightweight frame throttling and using hardware-accelerated transforms, which made translation buttery smooth."
+    },
+    {
+      "question": "Why B.Tech IT after Diploma in Civil Engineering?",
+      "answer": "During my Civil Engineering diploma, I realized I wanted to build solutions in the digital space where iteration is fast and impact is immediate. I transitioned to IT to merge civil structural problem-solving logic with cutting-edge software development."
+    },
+    {
+      "question": "What technologies do you want to learn next?",
+      "answer": "I am deeply curious about advanced AI-Agent frameworks (like LangChain or AutoGen) and voice cloning integrations. I hope to build more voice-enabled and multi-agent applications."
+    }
+  ]
+}
