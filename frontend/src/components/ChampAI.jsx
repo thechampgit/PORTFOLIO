@@ -19,6 +19,15 @@ export default function ChampAI() {
   const [isLoading, setIsLoading] = useState(false);
   const [playbackState, setPlaybackState] = useState('stopped');
   const [currentlySpeakingId, setCurrentlySpeakingId] = useState(null);
+  const [isAutoSpeak, setIsAutoSpeak] = useState(() => {
+    const saved = localStorage.getItem('champ_auto_speak');
+    return saved !== null ? JSON.parse(saved) : true;
+  });
+
+  // Sync auto-speak to local storage
+  useEffect(() => {
+    localStorage.setItem('champ_auto_speak', JSON.stringify(isAutoSpeak));
+  }, [isAutoSpeak]);
 
   const messagesEndRef = useRef(null);
   const abortControllerRef = useRef(null);
@@ -113,6 +122,11 @@ export default function ChampAI() {
         timestamp: getFormattedTime()
       };
       setMessages(prev => [...prev, aiMsg]);
+      
+      // Auto-speak response if enabled
+      if (isAutoSpeak) {
+        handleSpeakMessage(aiMsg.id, response.text);
+      }
       
       // Handle Auto-Scroll Page Action
       if (response.action) {
@@ -276,6 +290,19 @@ export default function ChampAI() {
               </div>
             </div>
             <div className="header-actions">
+              <button 
+                onClick={() => {
+                  if (isAutoSpeak) {
+                    handleStopSpeaking();
+                  }
+                  setIsAutoSpeak(!isAutoSpeak);
+                }} 
+                title={isAutoSpeak ? "Mute Auto-Speech" : "Enable Auto-Speech"}
+                aria-label="Toggle Auto-Speech"
+                className={isAutoSpeak ? "voice-toggle-active" : "voice-toggle-inactive"}
+              >
+                <i className={`fa-solid ${isAutoSpeak ? 'fa-volume-high' : 'fa-volume-xmark'}`}></i>
+              </button>
               <button 
                 onClick={() => setIsMinimized(!isMinimized)} 
                 title={isMinimized ? "Maximize" : "Minimize"}

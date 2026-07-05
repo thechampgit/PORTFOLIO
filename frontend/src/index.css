@@ -2672,3 +2672,15 @@ body.modal-open {
   0% { transform: scaleY(0.3); }
   100% { transform: scaleY(1.2); }
 }
+
+/* Voice Toggle Styles */
+.header-actions button.voice-toggle-active {
+  color: var(--color-gold);
+  opacity: 0.95;
+}
+
+.header-actions button.voice-toggle-inactive {
+  color: var(--color-cream);
+  opacity: 0.45;
+}
+

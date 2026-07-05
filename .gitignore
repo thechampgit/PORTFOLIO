@@ -93,3 +93,7 @@ pids/
 *.pid
 *.seed
 *.pid.lock
+
+# Local media outputs / tests
+*.mp3
+
