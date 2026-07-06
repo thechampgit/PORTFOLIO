@@ -18,7 +18,7 @@ app.use("/api/tts", ttsRouter);
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    message: "AI Portfolio Backend is running"
+    message: "AI Portfolio Backend is running",
   });
 });
 
