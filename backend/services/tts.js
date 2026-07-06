@@ -10,7 +10,7 @@ dotenv.config();
 export async function generateTTS(text) {
   const fishAudioApiKey = process.env.FISHAUDIO_API_KEY || process.env.FISH_API_KEY;
   const fishAudioVoiceId = process.env.FISHAUDIO_VOICE_ID;
-  const cosyVoiceUrl = process.env.COSYVOICE_URL || 'http://localhost:50000/tts';
+const cosyVoiceUrl = process.env.COSYVOICE_URL;
   const elevenLabsApiKey = process.env.ELEVENLABS_API_KEY;
   const elevenLabsVoiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM'; // Default voice
 
