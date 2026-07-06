@@ -1,21 +1,29 @@
-import express from 'express';
-import { askChampAI } from '../services/openai.js';
+import express from "express";
+import { askChampAI } from "../services/openai.js";
 
 const router = express.Router();
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   const { messages } = req.body;
 
-  if (!messages || !Array.isArray(messages) || messages.length === 0) {
-    return res.status(400).json({ error: 'Messages array is required' });
+  if (!messages || !Array.isArray(messages)) {
+    return res.status(400).json({
+      error: "Messages array is required"
+    });
   }
 
   try {
     const result = await askChampAI(messages);
-    res.json({ response: result.text });
+
+    res.json({
+      response: result.text
+    });
   } catch (err) {
-    console.error('Error in chat route:', err);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error(err);
+
+    res.status(500).json({
+      error: "Internal Server Error"
+    });
   }
 });
 

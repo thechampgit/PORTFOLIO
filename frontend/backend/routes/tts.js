@@ -1,53 +1,30 @@
-import express from 'express';
-import { generateTTS, streamTTS } from '../services/tts.js';
-import { Readable } from 'stream';
+import express from "express";
+import { generateTTS } from "../services/tts.js";
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   const { text } = req.query;
 
   if (!text) {
-    return res.status(400).json({ error: 'Text content is required for voice generation' });
-  }
-
-  try {
-    const { stream, mimeType } = await streamTTS(text);
-
-    res.setHeader('Content-Type', mimeType);
-    res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Transfer-Encoding', 'chunked');
-
-    if (stream.pipe) {
-      stream.pipe(res);
-    } else {
-      Readable.fromWeb(stream).pipe(res);
-    }
-  } catch (err) {
-    console.error('Error generating streaming voice clone:', err.message);
-    res.status(503).json({ error: 'Voice cloning service is currently unavailable' });
-  }
-});
-
-router.post('/', async (req, res) => {
-  const { text } = req.body;
-
-  if (!text) {
-    return res.status(400).json({ error: 'Text content is required for voice generation' });
+    return res.status(400).json({
+      error: "Text is required"
+    });
   }
 
   try {
     const { audioBuffer, mimeType } = await generateTTS(text);
-    
-    res.setHeader('Content-Type', mimeType);
-    res.setHeader('Content-Length', audioBuffer.length);
-    res.setHeader('Cache-Control', 'no-cache');
+
+    res.setHeader("Content-Type", mimeType);
     res.send(audioBuffer);
+
   } catch (err) {
-    console.error('Error generating voice clone:', err.message);
-    res.status(503).json({ error: 'Voice cloning service is currently unavailable' });
+    console.error(err);
+
+    res.status(500).json({
+      error: err.message
+    });
   }
 });
 
 export default router;
-

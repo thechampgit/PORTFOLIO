@@ -18,6 +18,7 @@ const cosyVoiceUrl = process.env.COSYVOICE_URL;
   if (fishAudioApiKey) {
     try {
       console.log('Attempting Fish Audio voice cloning...');
+      console.time("Fish Audio");
       const response = await fetch('https://api.fish.audio/v1/tts', {
         method: 'POST',
         headers: {
@@ -32,6 +33,7 @@ const cosyVoiceUrl = process.env.COSYVOICE_URL;
         }),
         signal: AbortSignal.timeout(30000)
       });
+      console.timeEnd("Fish Audio");
 
       if (response.ok) {
         const arrayBuffer = await response.arrayBuffer();
